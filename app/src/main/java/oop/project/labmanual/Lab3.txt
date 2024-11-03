@@ -1,0 +1,6 @@
+Question1: Write a Java program to display non diagonal elements and find their sum.
+Hint1: Non Principal Diagonal: The diagonal of a square matrix from the top right to the bottom left corner is called non principal diagonal.
+Question2: Write a Java program to display principal diagonal elements and find their sum.
+Hint2: Principal Diagonal: The principal diagonal of a rectangular matrix is the diagonal which runs from the top left corner and steps down and right, until the right edge or the bottom edge is reached.
+Question3: Find whether a given matrix is symmetric or not.
+Hint3: A = AT

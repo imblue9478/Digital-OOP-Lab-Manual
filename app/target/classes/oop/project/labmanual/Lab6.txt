@@ -1,0 +1,6 @@
+Question1: Write a java program to store student record of college named “MIT”. Class Student_Detail should contain name, id, college_name as its members.display_details() method should display the details of the students.
+Hint1: Define college_name as a static member in the Student_Detail class so it remains the same for all students.
+Question2: Write a counter program to count the number of objects created.
+Hint2: Use a static variable in the class to keep track of the number of times the constructor is called.
+Question3: Write a java program to illustrate autoboxing and unboxing by considering all data types.
+Hint3: Use examples of assigning primitive values to their corresponding wrapper classes (autoboxing) and retrieving primitive values from wrapper objects (unboxing) to illustrate how Java automatically converts between primitives and objects.

@@ -1,0 +1,29 @@
+class Employee {
+    String name, city;
+    double basicSalary, da, hra, totalSalary;
+
+    void getData(String name, String city, double basicSalary, double da, double hra) {
+        this.name = name;
+        this.city = city;
+        this.basicSalary = basicSalary;
+        this.da = da;
+        this.hra = hra;
+    }
+
+    void calculate() {
+        totalSalary = basicSalary + (basicSalary * da / 100) + (basicSalary * hra / 100);
+    }
+
+    void display() {
+        System.out.println("Name: " + name);
+        System.out.println("City: " + city);
+        System.out.println("Total Salary: " + totalSalary);
+    }
+
+    public static void main(String[] args) {
+        Employee emp = new Employee();
+        emp.getData("Riddhima", "Manipal", 50000, 10, 5);
+        emp.calculate();
+        emp.display();
+    }
+}

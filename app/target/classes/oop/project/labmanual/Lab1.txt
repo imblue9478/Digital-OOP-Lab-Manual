@@ -1,0 +1,6 @@
+Question1: Write a Java program to find whether a given year is leap or not using boolean data type.
+Hint1: A leap year has 366 days. A leap year is divisible by 4 and 400(if divisible by 100) whereas all others are common years.
+Question2: Write a Java program to read an int number, double number and  a char from keyboard and perform the following conversions:-  int to byte, char to int, double to byte, double to int
+Hint2: Use type casting to convert the variables from one type to another, like (byte) intVar, (int) charVar, etc.
+Question3: Write a Java program to multiply and divide a number by 2 using bitwise operator.
+Hint3: Use left shift and right shift bitwise operators.

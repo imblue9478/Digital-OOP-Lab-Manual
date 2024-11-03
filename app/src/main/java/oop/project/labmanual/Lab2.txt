@@ -1,0 +1,6 @@
+Question1: Write a program to compute whether a number is an Armstrong number or not. Use any of the iteration statements.
+Hint1: An Armstrong number for a given number of digits is one where the sum of its digits raised to the power of the number of digits equals the original number.
+Question2: Write a Java program to display the numbers in a number triangle format: a. using nested for loop.   b. using for-each loop.
+Hint2: Use a loop to print each line, with the line number determining both the value to print and the number of times to repeat it.
+Question3: Write a Java program to generate prime numbers between n and m
+Hint3: A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. Eg: 2, 3, 5,7,11 etc.

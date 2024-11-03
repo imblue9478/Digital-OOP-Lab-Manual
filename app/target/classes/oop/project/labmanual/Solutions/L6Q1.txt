@@ -1,0 +1,27 @@
+class Student_Detail {
+    private String name;
+    private String id;
+    private static final String college_name = "MIT";
+
+    public Student_Detail(String name, String id) {
+        this.name = name;
+        this.id = id;
+    }
+
+    public void display_details() {
+        System.out.println("Name: " + name);
+        System.out.println("ID: " + id);
+        System.out.println("College Name: " + college_name);
+    }
+
+    public static void main(String[] args) {
+        Student_Detail student1 = new Student_Detail("Riddhima", "S123");
+        Student_Detail student2 = new Student_Detail("Aryan", "S124");
+
+        System.out.println("Student 1 Details:");
+        student1.display_details();
+
+        System.out.println("\nStudent 2 Details:");
+        student2.display_details();
+    }
+}

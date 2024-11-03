@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class TypeConversion {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter an integer: ");
+        int intNumber = scanner.nextInt();
+
+        System.out.print("Enter a double: ");
+        double doubleNumber = scanner.nextDouble();
+
+        System.out.print("Enter a character: ");
+        char character = scanner.next().charAt(0);
+
+        byte intToByte = (byte) intNumber; // int to byte
+        int charToInt = (int) character;   // char to int
+        byte doubleToByte = (byte) doubleNumber; // double to byte
+        int doubleToInt = (int) doubleNumber;    // double to int
+
+        System.out.println("\nConversions:");
+        System.out.println("Integer to byte: " + intToByte);
+        System.out.println("Character to integer: " + charToInt);
+        System.out.println("Double to byte: " + doubleToByte);
+        System.out.println("Double to integer: " + doubleToInt);
+
+    }
+}
+

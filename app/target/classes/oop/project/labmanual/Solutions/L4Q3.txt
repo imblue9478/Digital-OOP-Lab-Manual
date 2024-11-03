@@ -1,0 +1,35 @@
+class Time {
+    int hours, minutes, seconds;
+
+    Time() {
+        this.hours = 0;
+        this.minutes = 0;
+        this.seconds = 0;
+    }
+
+    Time(int hours, int minutes, int seconds) {
+        this.hours = hours;
+        this.minutes = minutes;
+        this.seconds = seconds;
+    }
+
+    void displayTime() {
+        System.out.printf("%02d:%02d:%02d\n", hours, minutes, seconds);
+    }
+
+    static Time addTime(Time t1, Time t2) {
+        int totalSeconds = t1.seconds + t2.seconds;
+        int totalMinutes = t1.minutes + t2.minutes + totalSeconds / 60;
+        int totalHours = t1.hours + t2.hours + totalMinutes / 60;
+        return new Time(totalHours % 24, totalMinutes % 60, totalSeconds % 60);
+    }
+
+    public static void main(String[] args) {
+        Time time1 = new Time(2, 45, 50);
+        Time time2 = new Time(3, 20, 30);
+        Time time3 = addTime(time1, time2);
+        time1.displayTime();
+        time2.displayTime();
+        time3.displayTime();
+    }
+}

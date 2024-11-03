@@ -1,0 +1,82 @@
+class Account {
+    String customerName;
+    String accountNumber;
+    String accountType;
+    double balance;
+
+    Account(String customerName, String accountNumber, String accountType, double initialBalance) {
+        this.customerName = customerName;
+        this.accountNumber = accountNumber;
+        this.accountType = accountType;
+        this.balance = initialBalance;
+    }
+
+    void deposit(double amount) {
+        balance += amount;
+    }
+
+    void displayBalance() {
+        System.out.println("Balance: " + balance);
+    }
+
+    void withdraw(double amount) {
+        if (balance >= amount) {
+            balance -= amount;
+        } else {
+            System.out.println("Insufficient balance");
+        }
+    }
+}
+
+class SavingsAccount extends Account {
+    double interestRate;
+
+    SavingsAccount(String customerName, String accountNumber, double initialBalance, double interestRate) {
+        super(customerName, accountNumber, "Savings", initialBalance);
+        this.interestRate = interestRate;
+    }
+
+    void computeAndDepositInterest() {
+        double interest = balance * (interestRate / 100);
+        balance += interest;
+    }
+}
+
+class CurrentAccount extends Account {
+    double minimumBalance;
+    double serviceTax;
+
+    CurrentAccount(String customerName, String accountNumber, double initialBalance, double minimumBalance, double serviceTax) {
+        super(customerName, accountNumber, "Current", initialBalance);
+        this.minimumBalance = minimumBalance;
+        this.serviceTax = serviceTax;
+    }
+
+    void checkMinimumBalance() {
+        if (balance < minimumBalance) {
+            balance -= serviceTax;
+            System.out.println("Service tax imposed: " + serviceTax);
+        }
+    }
+}
+
+public class BankApplication {
+    public static void main(String[] args) {
+        SavingsAccount savings = new SavingsAccount("Riddhima", "SA12345", 5000.0, 5.0);
+        CurrentAccount current = new CurrentAccount("Aditi", "CA54321", 2000.0, 1000.0, 100.0);
+
+        savings.deposit(1000.0);
+        savings.displayBalance();
+        savings.computeAndDepositInterest();
+        savings.displayBalance();
+        savings.withdraw(2000.0);
+        savings.displayBalance();
+
+        current.deposit(500.0);
+        current.displayBalance();
+        current.withdraw(2500.0);
+        current.displayBalance();
+        current.checkMinimumBalance();
+        current.displayBalance();
+    }
+}

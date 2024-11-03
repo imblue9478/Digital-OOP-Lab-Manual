@@ -1,0 +1,44 @@
+public class AutoboxingUnboxing {
+    public static void main(String[] args) {
+        // Autoboxing: Primitive to Wrapper
+        Byte byteWrapper = 10;
+        Short shortWrapper = 20;
+        Integer intWrapper = 30;
+        Long longWrapper = 40L;
+        Float floatWrapper = 50.5F;
+        Double doubleWrapper = 60.6;
+        Character charWrapper = 'A';
+        Boolean boolWrapper = true;
+
+        // Unboxing: Wrapper to Primitive
+        byte bytePrimitive = byteWrapper;
+        short shortPrimitive = shortWrapper;
+        int intPrimitive = intWrapper;
+        long longPrimitive = longWrapper;
+        float floatPrimitive = floatWrapper;
+        double doublePrimitive = doubleWrapper;
+        char charPrimitive = charWrapper;
+        boolean boolPrimitive = boolWrapper;
+
+        // Displaying the values to demonstrate autoboxing and unboxing
+        System.out.println("Autoboxing:");
+        System.out.println("Byte Wrapper: " + byteWrapper);
+        System.out.println("Short Wrapper: " + shortWrapper);
+        System.out.println("Integer Wrapper: " + intWrapper);
+        System.out.println("Long Wrapper: " + longWrapper);
+        System.out.println("Float Wrapper: " + floatWrapper);
+        System.out.println("Double Wrapper: " + doubleWrapper);
+        System.out.println("Character Wrapper: " + charWrapper);
+        System.out.println("Boolean Wrapper: " + boolWrapper);
+
+        System.out.println("\nUnboxing:");
+        System.out.println("Byte Primitive: " + bytePrimitive);
+        System.out.println("Short Primitive: " + shortPrimitive);
+        System.out.println("Integer Primitive: " + intPrimitive);
+        System.out.println("Long Primitive: " + longPrimitive);
+        System.out.println("Float Primitive: " + floatPrimitive);
+        System.out.println("Double Primitive: " + doublePrimitive);
+        System.out.println("Character Primitive: " + charPrimitive);
+        System.out.println("Boolean Primitive: " + boolPrimitive);
+    }
+}

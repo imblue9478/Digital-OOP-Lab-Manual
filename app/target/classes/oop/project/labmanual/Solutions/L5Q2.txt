@@ -1,0 +1,102 @@
+class Student {
+    private String regNumber;
+    private String name;
+    private int age;
+
+    public Student(String regNumber, String name, int age) {
+        this.regNumber = regNumber;
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getRegNumber() {
+        return regNumber;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+
+class UGStudent extends Student {
+    private int semester;
+    private double fees;
+    private static int ugCount = 0;
+
+    public UGStudent(String regNumber, String name, int age, int semester, double fees) {
+        super(regNumber, name, age);
+        this.semester = semester;
+        this.fees = fees;
+        ugCount++;
+    }
+
+    public int getSemester() {
+        return semester;
+    }
+
+    public double getFees() {
+        return fees;
+    }
+
+    public static int getUGCount() {
+        return ugCount;
+    }
+
+    public void displayDetails() {
+        System.out.println("UG Student - RegNumber: " + getRegNumber() + ", Name: " + getName() + ", Age: " + getAge() + ", Semester: " + semester + ", Fees: " + fees);
+    }
+}
+
+class PGStudent extends Student {
+    private int semester;
+    private double fees;
+    private static int pgCount = 0;
+
+    public PGStudent(String regNumber, String name, int age, int semester, double fees) {
+        super(regNumber, name, age);
+        this.semester = semester;
+        this.fees = fees;
+        pgCount++;
+    }
+
+    public int getSemester() {
+        return semester;
+    }
+
+    public double getFees() {
+        return fees;
+    }
+
+    public static int getPGCount() {
+        return pgCount;
+    }
+
+    public void displayDetails() {
+        System.out.println("PG Student - RegNumber: " + getRegNumber() + ", Name: " + getName() + ", Age: " + getAge() + ", Semester: " + semester + ", Fees: " + fees);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        UGStudent ug1 = new UGStudent("UG001", "Alice", 20, 3, 30000);
+        UGStudent ug2 = new UGStudent("UG002", "Bob", 21, 5, 32000);
+
+        PGStudent pg1 = new PGStudent("PG001", "Charlie", 23, 1, 50000);
+        PGStudent pg2 = new PGStudent("PG002", "David", 24, 2, 55000);
+
+        System.out.println("UG Students:");
+        ug1.displayDetails();
+        ug2.displayDetails();
+
+        System.out.println("PG Students:");
+        pg1.displayDetails();
+        pg2.displayDetails();
+
+        System.out.println("Total UG Admissions: " + UGStudent.getUGCount());
+        System.out.println("Total PG Admissions: " + PGStudent.getPGCount());
+    }
+}
